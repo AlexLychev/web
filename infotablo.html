@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+    <head>
+        <title>КПИ.АПЦ.Информационное табло</title>
+        <link rel="stylesheet" href="infotablo.css">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div>
+                    <img src="assets/emias_logo_with_green.svg" class="logo">
+                </div>
+                    <span class="header-title">Дежурный врач (взрослые)</span>
+            </div>
+        </header>
+        <main>
+            <div class="left_block">
+                
+                <div class="left_big_block">
+                    <span class="ticket_huge font-color">Д001</span>
+                    <span class="go_to font-color">зайдите в кабинет</span>
+                    <span class="room font-color">314</span>
+                </div>
+                
+            </div>
+            
+            
+            <div class="right_block">
+                <span class="queue_length font-color">В очереди: 14 пациентов</span>
+                
+                <div class="row">
+                    <div id="priorTicket" class="ticket priority" onclick="reload()">Д001</div>
+                    <div class="ticket">Д002</div>
+                    <div class="ticket">Д003</div>
+                </div>
+                
+                <div class="row">
+                    <div class="ticket">Д004</div>
+                    <div class="ticket">Д005</div>
+                    <div class="ticket">Д006</div>
+                </div>
+                
+                <div class="row">
+                    <div class="ticket">Д007</div>
+                    <div class="ticket">Д008</div>
+                    <div class="ticket">Д009</div>
+                </div>
+
+                <div class="row">
+                    <div class="ticket">Д010</div>
+                    <div class="empty">...</div>
+                    <div class="ticket">Д014</div>
+                </div>
+                
+            </div>
+            
+            <div class="left_small_block">
+                    <span class="date_time font-color">29 марта 2018 | 08:03</span>
+            </div>
+            
+        </main>
+        <footer>
+            <div class="footer">
+                <span class="footer-message">Внимание: </span>
+                <marquee behavior="scroll" direction="left">Уважаемые пациенты, если вы пропустили свою очередь, не переживайте - вас пригласят на прием повторно</marquee>
+            </div>
+        </footer>
+        <script>
+            priorTicket.onclick = function() {
+                console.log('клик');
+                var ticket = document.querySelector('.ticket');
+                ticket.classList.add('hide');
+            }
+        </script>
+    </body>
+</html>
